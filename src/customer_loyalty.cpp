@@ -19,7 +19,10 @@ std::string getLoyaltyTier(const std::map<int, std::string>& tiers, int score)
     }
     else
     {
-        it--;
+        if (it->first != score)
+        {
+            it--;
+        }
         return it->second;
     }
 }
